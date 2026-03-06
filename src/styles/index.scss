@@ -1,9 +1,9 @@
-@use 'variables' as *;
-@use 'header';
-@use 'nav';
-@use 'stars';
-@use 'card';
-@use 'catalog';
+@use './variables' as *;
+@use './header';
+@use './nav';
+@use './stars';
+@use './card';
+@use './catalog';
 
 html {
   font-family: Roboto, sans-serif;
