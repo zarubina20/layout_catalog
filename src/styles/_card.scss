@@ -1,11 +1,11 @@
-@use 'variables' as *;
+@use './variables' as *;
 
 .card {
   box-sizing: border-box;
   width: $card-width;
-  padding: 32px 16px 16px;
+  padding: $card-padding-top $card-padding-h $card-padding-h;
   border: 1px solid $color-border;
-  border-radius: 5px;
+  border-radius: $border-radius;
   background: $color-white;
   transition: transform $transition;
 
@@ -16,15 +16,15 @@
 
   &__image {
     display: block;
-    width: 160px;
-    height: 134px;
-    margin: 0 auto 40px;
+    width: $card-image-width;
+    height: $card-image-height;
+    margin: 0 auto $card-image-margin-bottom;
   }
 
   &__title {
-    margin: 0 0 4px;
-    font-size: 12px;
-    line-height: 18px;
+    margin: 0 0 $card-title-margin;
+    font-size: $font-size-sm;
+    line-height: $line-height-md;
     font-weight: 500;
     color: $color-primary;
     transition: color $transition;
@@ -35,14 +35,14 @@
   }
 
   &__code {
-    margin-bottom: 16px;
+    margin-bottom: $card-padding-h;
   }
 
   &__review-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: $card-review-margin-bottom;
   }
 
   &__review-count {
@@ -53,17 +53,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: $card-padding-h;
   }
 
   &__price-label {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: $font-size-sm;
+    line-height: $line-height-md;
   }
 
   &__price {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: $font-size-lg;
+    line-height: $line-height-md;
     font-weight: 700;
     color: $color-primary;
   }
@@ -73,12 +73,12 @@
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: $button-height;
     border: 1px solid $color-accent;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius: $border-radius;
+    font-size: $font-size-md;
     font-weight: 700;
-    line-height: 16px;
+    line-height: $line-height-sm;
     color: $color-white;
     text-decoration: none;
     text-transform: uppercase;

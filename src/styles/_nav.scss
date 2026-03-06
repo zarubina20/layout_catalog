@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use './variables' as *;
 
 .nav {
   &__list {
@@ -9,7 +9,7 @@
   }
 
   &__item {
-    margin-left: 20px;
+    margin-left: $nav-item-gap;
 
     &:first-child {
       margin-left: 0;
@@ -20,8 +20,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    height: 60px;
-    font-size: 12px;
+    height: $nav-link-height;
+    font-size: $font-size-sm;
     font-weight: 500;
     white-space: nowrap;
     text-decoration: none;
@@ -38,8 +38,8 @@
         right: 0;
         bottom: 0;
         left: 0;
-        height: 4px;
-        border-radius: 2px;
+        height: $nav-active-bar-height;
+        border-radius: $nav-active-bar-radius;
         background-color: $color-accent;
       }
     }
